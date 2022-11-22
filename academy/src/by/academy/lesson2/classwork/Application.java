@@ -15,6 +15,7 @@ public class Application {
 		cat2.eat();
 		cat2.sleep();
 		cat2.walk();
+		Cat cat3 = new Cat();
 	}
 
 }
