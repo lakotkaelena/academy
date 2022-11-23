@@ -13,6 +13,7 @@ public class Cat {
 	}
 
 	public void eat() {
+		System.out.println("test");
 		System.out.println("Кот ест");
 	}
 
@@ -21,7 +22,6 @@ public class Cat {
 	}
 
 	public Cat() {
-		System.out.println("test");
 	}
 
 	public Cat(String nickname) {
