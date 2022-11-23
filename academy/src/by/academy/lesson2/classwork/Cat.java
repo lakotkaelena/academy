@@ -22,7 +22,7 @@ public class Cat {
 	}
 
 	public Cat() {
-		System.out.println("test1");
+		System.out.println("test3");
 	}
 
 	public Cat(String nickname) {
