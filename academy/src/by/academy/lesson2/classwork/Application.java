@@ -9,7 +9,6 @@ public class Application {
 		cat1.grow();
 		System.out.println(cat1.age);
 		System.out.println(cat1.age);
-		System.out.println(cat1.age);
 
 		Cat cat2 = new Cat("Tom");
 		cat2.eat();
