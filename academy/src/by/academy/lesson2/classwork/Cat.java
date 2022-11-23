@@ -13,6 +13,7 @@ public class Cat {
 	}
 
 	public void eat() {
+		System.out.println("test");
 		System.out.println("Кот ест");
 	}
 
