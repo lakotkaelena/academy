@@ -27,4 +27,5 @@ public class Cat {
 	public Cat(String nickname) {
 		this.nickname = nickname;
 	}
+	
 }
