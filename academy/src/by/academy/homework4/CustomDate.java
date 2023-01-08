@@ -10,12 +10,12 @@ public class CustomDate {
     private static final String text = "((0[1-9]|[12][0-9]|3[01])(-)(0[1-9]|1[012])(-)((19|20)\\d\\d))";
     private static final Pattern pattern = Pattern.compile(text);
 
-   private int year;
+    private int year;
     private int month;
     private int day;
     private String date;
-    Year year0=new Year();
-    Day day0=new Day();
+    Year year0 = new Year();
+    Day day0 = new Day();
 
     public CustomDate() {
         super();
@@ -25,7 +25,6 @@ public class CustomDate {
         super();
         this.date = date;
     }
-
 
 
     public String validate() {
@@ -42,9 +41,10 @@ public class CustomDate {
         LocalDate localDate = LocalDate.parse(date, formatDate);
         return localDate;
     }
+
     public CustomDate(int year, int month, int day) {
         super();
-        this.year =year;
+        this.year = year;
         this.month = month;
         this.day = day;
 
@@ -55,7 +55,7 @@ public class CustomDate {
         public boolean isLeapsYear() {
             boolean leapsYear;
             int year = dateFormat().getYear();
-            if (year % 4 == 0 && year % 100 != 0 ) {
+            if (year % 4 == 0 && year % 100 != 0) {
                 leapsYear = true;
             } else {
                 leapsYear = false;
@@ -101,6 +101,19 @@ public class CustomDate {
             }
             codeOfYear = (6 + dateFormat().getYear() % 100 + (dateFormat().getYear() % 100) / 4) % 7;
             dayNum = (dateFormat().getDayOfMonth() + codeOfMonth + codeOfYear) % 7;
+
+            if (dateFormat().getDayOfMonth() <= 31 && dateFormat().getMonthValue() == 1 && year0.isLeapsYear() == true) {
+                dayNum = ((dateFormat().getDayOfMonth() + codeOfMonth + codeOfYear) % 7) - 1;
+            }
+
+            if (dateFormat().getDayOfMonth() <= 29 && dateFormat().getMonthValue() == 2 && year0.isLeapsYear() == true) {
+                dayNum = ((dateFormat().getDayOfMonth() + codeOfMonth + codeOfYear) % 7) - 1;
+            }
+
+
+
+
+
             return dayNum;
         }
 
