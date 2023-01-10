@@ -4,6 +4,7 @@ import by.academy.lesson14.classwork.HeavyBox;
 
 import java.util.ArrayList;
 
+
 public class CustomListDemo {
     public static void main(String[] args) {
         CustomArrayList<String> list = new CustomArrayList<>();
