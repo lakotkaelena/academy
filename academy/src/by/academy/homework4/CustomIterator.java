@@ -12,9 +12,9 @@ public class CustomIterator<T> implements Iterator<T> {
         super();
     }
 
-    public CustomIterator(T[] array, int size) {
+    public CustomIterator(T[] array, int count) {
         this.array = array;
-        this.count = size;
+        this.count = count;
     }
 
     @Override
