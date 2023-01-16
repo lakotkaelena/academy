@@ -24,7 +24,6 @@ public class Task1 {
         list.add(heavyBox4);
         for (HeavyBox list1 : list) {
             System.out.println(list1.toString());
-
         }
 
         Set<HeavyBox> set = new LinkedHashSet<>(list); //создаем множество из элементов списка
