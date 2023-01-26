@@ -15,25 +15,16 @@ public class Task5 {
             "God knows, God knows I've fallen in love.";
 
     public static void main(String[] args) {
-        char[] symbol = new char[95];
-        for (int i = 0, j = 32; i < symbol.length; i++, j++) {
-            symbol[i] = (char) j;
+        Map<Character, Integer> map = new HashMap<>();
+        for (int textIndex = 0; textIndex < text.length(); textIndex++) {
+            if (map.containsKey(text.charAt(textIndex))) {
+                int count = map.get(text.charAt(textIndex));
+                count++;
+                map.put(text.charAt(textIndex), count);
 
-        }
-        System.out.println(symbol);
-        Map<Character, Integer> map = new HashMap<>(95);
-        int textIndex = 0;
-        int count = 0;
-        for (int i = 0; i < symbol.length; ) {
-            for (textIndex = 0; textIndex < text.length(); textIndex++) {
-                if (symbol[i] == text.charAt(textIndex)) {
-                    count++;
-                    map.put(symbol[i], count);
-
-                }
+            } else {
+                map.put(text.charAt(textIndex), 1);
             }
-            count = 0;
-            i++;
         }
         System.out.println(map);
     }
